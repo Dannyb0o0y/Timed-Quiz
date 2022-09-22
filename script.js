@@ -7,7 +7,7 @@ startButton.addEventListener("click", startQuiz);
 function startQuiz() {
   startButton.classList.add("hide");
   questionContainer.classList.remove("hide");
-  questionText.innerText = questions.question;
+  questionText.innerText = questions[0].question;
 }
 
 function showQuestions() {}
