@@ -10,20 +10,12 @@ function startQuiz() {
   startButton.classList.add("hide");
   questionContainer.classList.remove("hide");
   questionText.innerText = questions[0].question;
-  var button = document.createElement("button");
-  answerText.appendChild(button);
-  button.innerText = questions[0].answers[0].text;
-  var button = document.createElement("button");
-  answerText.appendChild(button);
-  button.innerText = questions[0].answers[1].text;
-  var button = document.createElement("button");
-  answerText.appendChild(button);
-  button.innerText = questions[0].answers[2].text;
-  var button = document.createElement("button");
-  answerText.appendChild(button);
-  button.innerText = questions[0].answers[3].text;
-  var button = document.createElement("button");
-  answerText.addEventListener("click", resetState);
+  questions.answers.forEach((answer) => {
+    var button = document.createElement("button");
+    button.innerText = questions[0].answers[3].text;
+    button.classList.add("btn");
+    console.log(startQuiz);
+  });
 }
 
 function resetState() {
