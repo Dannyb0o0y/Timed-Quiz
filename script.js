@@ -10,11 +10,12 @@ function startQuiz() {
   startButton.classList.add("hide");
   questionContainer.classList.remove("hide");
   questionText.innerText = questions[0].question;
-  questions.answers.forEach((answer) => {
+  questions[0].answers.forEach((answer) => {
     var button = document.createElement("button");
-    button.innerText = questions[0].answers[3].text;
+    button.innerText = answer.text;
     button.classList.add("btn");
-    console.log(startQuiz);
+    answerText.appendChild(button);
+    resetState();
   });
 }
 
