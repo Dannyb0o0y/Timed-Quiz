@@ -32,3 +32,9 @@ body {
 .hide {
   display: none;
 }
+
+.main-container {
+  border-radius: 50px;
+  padding: 20px;
+  background-color: aliceblue;
+}
