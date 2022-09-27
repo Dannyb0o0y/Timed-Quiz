@@ -65,7 +65,7 @@ function checkAnswer(event) {
   );
   var userAnswer = event.target.getAttribute("data-correct");
   if (userAnswer == "true") {
-    scoreCheck += 5;
+    scoreCheck += 13;
     result.innerText = "right";
   } else {
     result.innerText = "wrong";
@@ -89,7 +89,7 @@ function finalState() {
 
 const questions = [
   {
-    question: "What is 2 + 2",
+    question: "What is 2 + 2?",
     answers: [
       { text: "4", correct: true },
       { text: "22", correct: false },
@@ -98,21 +98,21 @@ const questions = [
     ],
   },
   {
-    question: "how is 3 + 2",
+    question: "what is 3 + 2?",
     answers: [
-      { text: "4", correct: true },
-      { text: "22", correct: false },
-      { text: "8", correct: false },
-      { text: "10", correct: false },
+      { text: "7", correct: false },
+      { text: "77", correct: false },
+      { text: "5", correct: true },
+      { text: "9", correct: false },
     ],
   },
   {
-    question: "What kind of 3 + 2",
+    question: "What is 8 + 10?",
     answers: [
-      { text: "4", correct: true },
-      { text: "22", correct: false },
-      { text: "8", correct: false },
+      { text: "33", correct: false },
       { text: "10", correct: false },
+      { text: "15", correct: false },
+      { text: "18", correct: true },
     ],
   },
 ];
