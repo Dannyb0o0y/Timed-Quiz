@@ -11,16 +11,22 @@
   <body>
     <div class="main-container">
       <div id="container" class="hide">
-        <div id="question">questions</div>
+        <div id="question" class="question-container">questions</div>
         <div id="answer-buttons" class="question-button"></div>
         <div>
-          <div id="result-message"></div>
-          <div id="timer"></div>
+          <div class="result" id="result-message"></div>
+          <div class="timer" id="timer"></div>
         </div>
       </div>
       <div class="sub-button">
-        <button id="start-btn">start</button>
+        <button class="start" id="start-btn">start</button>
         <button id="next-btn" class="hide">next</button>
+      </div>
+      <div class="result-text" id="results">
+        <h3 id="userscore"></h3>
+        <label>Enter User Initals</label>
+        <input id="userinitials" type="text" />
+        <button id="saveuser">Save</button>
       </div>
     </div>
   </body>

@@ -5,13 +5,18 @@ var answerText = document.getElementById("answer-buttons");
 var nextButton = document.getElementById("next-btn");
 var result = document.getElementById("result-message");
 var time = document.getElementById("timer");
+var results = document.getElementById("results");
+var score = document.getElementById("userscore");
+var saveResult = document.getElementById("saveuser");
+var saveInitial = document.getElementById("userinitials");
+
 var cQuestion = 0;
 var scoreCheck = 0;
 var timerObj;
 var timerCount = 60;
 startButton.addEventListener("click", startQuiz);
 // answerText.addEventListener("click",)
-
+results.classList.add("hide");
 function startQuiz() {
   startButton.classList.add("hide");
   questionContainer.classList.remove("hide");
@@ -21,8 +26,7 @@ function startQuiz() {
     if (timerCount > 0) {
       timerCount--;
     } else {
-      clearInterval(timerObj);
-      questionContainer.classList.add("hide");
+      finalState();
     }
   }, 1000);
   console.log(questions[cQuestion].question);
@@ -71,13 +75,16 @@ function checkAnswer(event) {
     cQuestion++;
     displayQuestion();
   } else {
-    questionContainer.classList.add("hide");
-    clearInterval(timerObj);
+    finalState();
   }
 }
 
-function resetState() {
-  nextButton.classList.remove("hide");
+function finalState() {
+  clearInterval(timerObj);
+  questionContainer.classList.add("hide");
+
+  results.classList.remove("hide");
+  score.innerText = "Final Score: " + (scoreCheck + timerCount);
 }
 
 const questions = [
